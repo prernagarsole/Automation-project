@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Record Your Voice and Convert it to Text in Flask</title>
+</head>
+<body>
+	<h1>Record Your Voice and Convert it to Text in Flask</h1>
+	<p>Record your audio using <a href="https://voicecoach.ai/voice-recorder" target="_blank">VoiceCoach.ai's voice recorder</a> and upload the WAV file below:</p>
+	<form method="POST" enctype="multipart/form-data">
+		<label for="file">Select a WAV file to transcribe:</label>
+		<input type="file" name="file" id="file"><br><br>
+		<input type="submit" value="Transcribe">
+	</form>
+	{% if transcript %}
+		<h2>Transcript:</h2>
+		<p>{{ transcript }}</p>
+	{% endif %}
+</body>
+</html>
